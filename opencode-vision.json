@@ -1,4 +1,4 @@
 {
-  "models": ["opencode-go/*"],
+  "models": ["*"],
   "imageAnalysisTool": "mcp_openrouter_image_analyze_image"
 }

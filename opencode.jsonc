@@ -68,6 +68,6 @@
       // Tout le reste demande confirmation
       "*": "ask"
     }
-  },
+  }
+}
 
-  // ── Vision bridge (opencode-vision plugin) ─────────────
