@@ -65,6 +65,6 @@
     }
   },
 
-  // ── Divers ──────────────────────────────────────────────────────────────────
-  "autoupdate": true
-}
+  // ── Vision bridge (opencode-vision plugin) ─────────────────────────────────
+  // Intercepte les images collées et les route vers un modèle vision via MCP.
+  // Conf
