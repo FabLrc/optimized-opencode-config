@@ -35,7 +35,12 @@
     // Plan : raisonnement approfondi avant toute implémentation
     "plan": {
       "model": "opencode-go/deepseek-v4-pro",
-      "temperature": 0.1
+      "temperature": 0.1,
+      "permission": {
+        "edit": "allow",
+        "webfetch": "allow",
+        "bash": "allow"
+      }
     },
     // Build : exécution rapide mais réfléchie, toutes les commandes auto-approuvées
     "build": {
@@ -73,6 +78,11 @@
   // ── Vision bridge (opencode-vision plugin) ──────────────
   "plugin": ["opencode-vision"],
   "mcp": {
+    "context7": {
+      "type": "local",
+      "command": ["npx.cmd", "-y", "@upstash/context7-mcp"],
+      "enabled": true
+    },
     "openrouter_image": {
       "type": "local",
       "command": ["npx.cmd", "-y", "openrouter-image-mcp"],
