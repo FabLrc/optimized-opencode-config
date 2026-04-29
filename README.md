@@ -79,23 +79,28 @@ The config minimizes interruptions for safe operations and requires confirmation
 
 DeepSeek models don't natively support images. The `opencode-vision` plugin bridges this by routing pasted images through a vision model ([nvidia/nemotron-nano-12b-v2-vl:free](https://openrouter.ai/nvidia/nemotron-nano-12b-v2-vl:free) via OpenRouter) before passing a text description to DeepSeek.
 
-**1. Get a free OpenRouter API key** at [openrouter.ai/keys](https://openrouter.ai/keys) — no credits required for this model.
+**1. Build and install the plugin**
 
-**2. Set the `OPENROUTER_API_KEY` environment variable on your machine:**
+`opencode-vision` is not on npm — it must be built from source and placed in `~/.config/opencode/plugin/`.
 
 <details>
-<summary><strong>Windows</strong></summary>
+<summary><strong>Windows (PowerShell)</strong></summary>
 
-Via the GUI:
-1. `Win + R` → type `sysdm.cpl` → Enter
-2. Tab **"Advanced"** → button **"Environment Variables..."**
-3. Under **"User variables"**, click **"New..."**
-4. Name: `OPENROUTER_API_KEY` / Value: your key
-5. OK → OK → OK
-
-Or via PowerShell (one line):
 ```powershell
-[System.Environment]::SetEnvironmentVariable("OPENROUTER_API_KEY", "your-key-here", "User")
+cd $env:TEMP
+git clone https://github.com/DavidEasden/opencode-vision.git
+cd opencode-vision
+npm install
+npm run build
+New-Item -ItemType Directory -Force "$env:USERPROFILE\.config\opencode\plugin"
+Copy-Item "dist\index.js" "$env:USERPROFILE\.config\opencode\plugin\opencode-vision.js"
 ```
+</details>
 
-Restart OpenCode after setting the vari
+<details>
+<summary><strong>macOS / Linux</strong></summary>
+
+```sh
+cd /tmp
+git clone https://github.com/DavidEasden/opencode-vision.git
+cd opencode-v
