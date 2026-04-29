@@ -68,6 +68,15 @@
       // Tout le reste demande confirmation
       "*": "ask"
     }
-  }
+  },
+
+  // ── Vision bridge (opencode-vision plugin) ──────────────
+  "mcpServers": {
+    "openrouter_image": {
+      "command": "npx",
+      "args": ["-y", "github:DavidEasden/openrouter-image-mcp"]
+    }
+  },
+  "autoupdate": true
 }
 
