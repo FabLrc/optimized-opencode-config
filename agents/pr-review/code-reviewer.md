@@ -1,7 +1,7 @@
 ---
 description: Reviews code for adherence to project guidelines, style guides, and best practices. Use proactively after writing or modifying code, especially before committing or creating pull requests. Checks for style violations, potential issues, and ensures code follows established patterns.
 mode: subagent
-model: opencode/deepseek-v4-pro
+model: opencode-go/deepseek-v4-pro
 tools:
   write: false
   edit: false

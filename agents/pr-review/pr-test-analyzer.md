@@ -1,7 +1,7 @@
 ---
 description: Reviews a pull request for test coverage quality and completeness. Invoked after a PR is created or updated to ensure tests adequately cover new functionality and edge cases.
 mode: subagent
-model: opencode/deepseek-v4-flash
+model: opencode-go/deepseek-v4-flash
 tools:
   write: false
   edit: false

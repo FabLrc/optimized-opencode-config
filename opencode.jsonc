@@ -3,12 +3,12 @@
 
   // ── Modèle par défaut ───────────────────────────────────────────────────────
   // DeepSeek v4 Flash via OpenCode Go, avec raisonnement au budget maximal.
-  "model": "opencode/deepseek-v4-flash",
+  "model": "opencode-go/deepseek-v4-flash",
 
   // ── Options de raisonnement par modèle ─────────────────────────────────────
   // Active le mode thinking avec budget maximal pour les deux modèles DeepSeek.
   "provider": {
-    "opencode": {
+    "opencode-go": {
       "models": {
         "deepseek-v4-flash": {
           "options": {
@@ -34,12 +34,12 @@
   "agent": {
     // Plan : raisonnement approfondi avant toute implémentation
     "plan": {
-      "model": "opencode/deepseek-v4-pro",
+      "model": "opencode-go/deepseek-v4-pro",
       "temperature": 0.1
     },
     // Build : exécution rapide mais réfléchie, toutes les commandes auto-approuvées
     "build": {
-      "model": "opencode/deepseek-v4-flash",
+      "model": "opencode-go/deepseek-v4-flash",
       "temperature": 0.2,
       "permission": {
         "edit": "allow",
@@ -70,4 +70,4 @@
     }
   },
 
-  // ── Vision bridge (opencode-vision plugin) ──────────────
+  // ── Vision bridge (opencode-vision plugin) ─────────────

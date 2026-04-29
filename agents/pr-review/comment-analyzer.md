@@ -1,7 +1,7 @@
 ---
 description: Analyzes code comments for accuracy, completeness, and long-term maintainability. Use after adding documentation, before finalizing a PR with comments, or when reviewing existing comments for technical debt.
 mode: subagent
-model: opencode/deepseek-v4-flash
+model: opencode-go/deepseek-v4-flash
 tools:
   write: false
   edit: false
