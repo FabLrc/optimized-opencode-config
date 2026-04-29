@@ -71,15 +71,17 @@
   },
 
   // ── Vision bridge (opencode-vision plugin) ──────────────
-  "mcpServers": {
+  "plugin": ["opencode-vision"],
+  "mcp": {
     "openrouter_image": {
-      "command": "npx.cmd",
-      "args": ["-y", "openrouter-image-mcp"],
-      "env": {
+      "type": "local",
+      "command": ["npx.cmd", "-y", "openrouter-image-mcp"],
+      "environment": {
         "OPENROUTER_MODEL": "nvidia/nemotron-nano-12b-v2-vl:free",
         "LOG_LEVEL": "error",
         "DOTENV_CONFIG_QUIET": "true"
-      }
+      },
+      "enabled": true
     }
   },
   "autoupdate": true
