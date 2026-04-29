@@ -1,2 +1,70 @@
 {
-  "$schema": "https://opencode.ai/config.json",}
+  "$schema": "https://opencode.ai/config.json",
+
+  // ── Modèle par défaut ───────────────────────────────────────────────────────
+  // DeepSeek v4 Flash via OpenCode Go, avec raisonnement au budget maximal.
+  "model": "opencode/deepseek-v4-flash",
+
+  // ── Options de raisonnement par modèle ─────────────────────────────────────
+  // Active le mode thinking avec budget maximal pour les deux modèles DeepSeek.
+  "provider": {
+    "opencode": {
+      "models": {
+        "deepseek-v4-flash": {
+          "options": {
+            "thinking": {
+              "type": "enabled",
+              "budgetTokens": 32000
+            }
+          }
+        },
+        "deepseek-v4-pro": {
+          "options": {
+            "thinking": {
+              "type": "enabled",
+              "budgetTokens": 32000
+            }
+          }
+        }
+      }
+    }
+  },
+
+  // ── Agents intégrés ─────────────────────────────────────────────────────────
+  "agent": {
+    // Plan : raisonnement approfondi avant toute implémentation
+    "plan": {
+      "model": "opencode/deepseek-v4-pro",
+      "temperature": 0.1
+    },
+    // Build : exécution rapide mais réfléchie
+    "build": {
+      "model": "opencode/deepseek-v4-flash",
+      "temperature": 0.2
+    }
+  },
+
+  // ── Permissions globales ────────────────────────────────────────────────────
+  // Édition de fichiers toujours autorisée ; bash lecture seule auto-approuvée.
+  "permission": {
+    "edit": "allow",
+    "webfetch": "ask",
+    "bash": {
+      // Commandes de lecture / inspection : auto-approuvées
+      "git log*": "allow",
+      "git diff*": "allow",
+      "git status*": "allow",
+      "git show*": "allow",
+      "grep *": "allow",
+      "find *": "allow",
+      "ls *": "allow",
+      "cat *": "allow",
+      "echo *": "allow",
+      // Tout le reste demande confirmation
+      "*": "ask"
+    }
+  },
+
+  // ── Divers ──────────────────────────────────────────────────────────────────
+  "autoupdate": true
+}
