@@ -1,7 +1,7 @@
 ---
 description: Simplifies code for clarity, consistency, and maintainability while preserving all functionality. Triggered after completing a coding task or writing a logical chunk of code. Focuses only on recently modified code unless instructed otherwise.
 mode: subagent
-model: anthropic/claude-opus-4-6
+model: opencode/deepseek-v4-pro
 tools:
   write: true
   edit: true

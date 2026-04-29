@@ -1,7 +1,7 @@
 ---
 description: Reviews code changes in a pull request to identify silent failures, inadequate error handling, and inappropriate fallback behavior. Invoke after implementing error handling, catch blocks, fallback logic, or any code that could suppress errors.
 mode: subagent
-model: anthropic/claude-sonnet-4-6
+model: opencode/deepseek-v4-flash
 tools:
   write: false
   edit: false

@@ -1,7 +1,7 @@
 ---
 description: Provides expert analysis of type design in a codebase. Use when introducing a new type, during PR creation to review added types, or when refactoring existing types. Provides qualitative feedback and quantitative ratings on encapsulation, invariant expression, usefulness, and enforcement.
 mode: subagent
-model: anthropic/claude-sonnet-4-6
+model: opencode/deepseek-v4-flash
 tools:
   write: false
   edit: false
