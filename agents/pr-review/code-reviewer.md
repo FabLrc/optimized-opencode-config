@@ -27,7 +27,7 @@ By default, review unstaged changes from `git diff`. The user may specify differ
 
 **Bug Detection**: Identify actual bugs that will impact functionality — logic errors, null/undefined handling, race conditions, memory leaks, security vulnerabilities, and performance problems.
 
-**Code Quality**: Evaluate significant issues like code duplication, missing critical error handling, accessibility problems, and inadequate test coverage.
+**Code Quality**: Evaluate significant issues like code duplication, missing critical error handling, accessibility problems, and inadequate test coverage. Verify adherence to SOLID, KISS, Clean Code, and Boy Scout rule as defined in AGENTS.md.
 
 ## Issue Confidence Scoring
 

@@ -87,7 +87,7 @@
       "type": "local",
       "command": ["npx.cmd", "-y", "openrouter-image-mcp"],
       "environment": {
-        "OPENROUTER_MODEL": "anthropic/claude-sonnet-4.6",
+        "OPENROUTER_MODEL": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
         "LOG_LEVEL": "error",
         "DOTENV_CONFIG_QUIET": "true"
       },

@@ -32,6 +32,7 @@ You will analyze recently modified code and apply refinements that:
    - Removing unnecessary comments that describe obvious code
    - **IMPORTANT**: Avoid nested ternary operators — prefer switch statements or if/else chains
    - Choose clarity over brevity — explicit code is often better than overly compact code
+   - Apply KISS and Clean Code principles from AGENTS.md: eliminate unnecessary abstractions, flatten deep nesting, simplify complex conditionals, prefer small focused functions
 
 4. **Maintain Balance**: Avoid over-simplification that could:
    - Reduce code clarity or maintainability
