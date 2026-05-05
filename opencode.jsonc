@@ -76,7 +76,13 @@
   },
 
   // ── Vision bridge (opencode-vision plugin) ──────────────
-  "plugin": ["opencode-vision"],
+  "plugin": [
+    ["@plannotator/opencode@latest", {
+      "workflow": "plan-agent",
+      "planningAgents": ["plan"]
+    }],
+    "opencode-vision"
+  ],
   "mcp": {
     "context7": {
       "type": "local",
