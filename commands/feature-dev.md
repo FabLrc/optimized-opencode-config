@@ -51,6 +51,7 @@ Initial request: $ARGUMENTS
 
 2. Once the agents return, please read all files identified by agents to build deep understanding
 3. Present comprehensive summary of findings and patterns discovered
+4. Déclencher `/plannotator-annotate` sur les fichiers clés identifiés pour une annotation interactive (si l'utilisateur est disponible pour de l'interaction)
 
 ---
 
@@ -79,6 +80,7 @@ If the user says "whatever you think is best", provide your recommendation and g
 2. Review all approaches and form your opinion on which fits best for this specific task (consider: small fix vs large feature, urgency, complexity, team context)
 3. Present to user: brief summary of each approach, trade-offs comparison, **your recommendation with reasoning**, concrete implementation differences
 4. **Ask user which approach they prefer**
+5. Une fois l'approche validée, utiliser `/plannotator-archive` pour sauvegarder la décision d'architecture
 
 ---
 

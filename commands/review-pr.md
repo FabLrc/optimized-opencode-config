@@ -25,6 +25,7 @@ Lance une revue de pull request en utilisant plusieurs agents spécialisés, cha
 - **errors** — Vérifier la gestion des erreurs et les échecs silencieux
 - **types** — Analyser la conception des types et les invariants (si de nouveaux types ont été ajoutés)
 - **code** — Revue générale du code selon les conventions du projet
+- **ui** — Revue UI/UX frontend avec analyse d'images (screenshots)
 - **simplify** — Simplifier le code pour plus de clarté et de maintenabilité
 - **all** — Lancer toutes les revues applicables (par défaut)
 
@@ -36,6 +37,7 @@ Selon les changements :
 - **Si commentaires/docs ajoutés** : comment-analyzer
 - **Si gestion des erreurs modifiée** : silent-failure-hunter
 - **Si types ajoutés/modifiés** : type-design-analyzer
+- **Si fichiers frontend modifiés (`.tsx`, `.jsx`, `.css`, `.scss`, `.vue`, `.svelte`) ou screenshots inclus** : ui-reviewer
 - **Après revue réussie** : code-simplifier (polish)
 
 ### 4. Lancer les agents de revue
@@ -50,11 +52,15 @@ Agents disponibles dans `agents/pr-review/` :
 - `type-design-analyzer` — Conception des types et invariants
 - `code-reviewer` — Conformité aux conventions et bugs
 - `code-simplifier` — Simplification et clarté
+- `ui-reviewer` — Revue UI frontend avec analyse d'images (screenshots)
 
 ### 5. Consolider les résultats
 
 ```markdown
 # Résumé de la revue PR
+
+### Revue interactive
+Une revue interactive a été ouverte via `/plannotator-review`. Consultez-la pour valider les issues.
 
 ## Issues critiques (X trouvées)
 - [agent]: Description [fichier:ligne]
@@ -75,7 +81,13 @@ Agents disponibles dans `agents/pr-review/` :
 4. Relancer la revue après les corrections
 ```
 
-### 6. Plan d'action
+### 6. Revue interactive avec Plannotator
+
+Après la consolidation des résultats, déclencher `/plannotator-review` pour une revue interactive complète :
+- Cela ouvre l'interface de revue qui permet d'annoter et valider chaque issue
+- L'utilisateur peut approuver/rejeter les issues directement dans l'interface
+
+### 7. Plan d'action
 
 Organiser les résultats par priorité et proposer un plan d'action clair.
 
@@ -85,6 +97,7 @@ Organiser les résultats par priorité et proposer un plan d'action clair.
 /review-pr                    # Revue complète (défaut)
 /review-pr tests errors       # Tests et gestion d'erreurs uniquement
 /review-pr comments           # Commentaires uniquement
+/review-pr ui                 # Revue UI/UX frontend uniquement
 /review-pr simplify           # Simplification uniquement
 /review-pr all parallel       # Tous les agents en parallèle
 ```

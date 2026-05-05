@@ -15,6 +15,9 @@ This configuration bridges that gap. It brings Claude Code's best practices into
 ├── opencode.jsonc          # Global config: models, permissions, built-in agents
 │
 ├── agents/
+│   ├── shared/             # Shared references for all agents
+│   │   └── tool-guide.md         — MCP tools usage guide (Context7, WebFetch, Image Analysis, Plannotator)
+│   │
 │   ├── feature-dev/        # Trio of agents for feature development
 │   │   ├── code-explorer.md      — Codebase exploration and understanding
 │   │   ├── code-architect.md     — Technical planning and design
@@ -26,15 +29,16 @@ This configuration bridges that gap. It brings Claude Code's best practices into
 │       ├── comment-analyzer.md   — PR comment analysis
 │       ├── pr-test-analyzer.md   — Test coverage assessment
 │       ├── silent-failure-hunter.md — Silent error and swallowed exception detection
-│       └── type-design-analyzer.md  — Type design quality review
+│       ├── type-design-analyzer.md  — Type design quality review
+│       └── ui-reviewer.md        — Frontend UI/UX review with image analysis
 │
 ├── commands/
 │   ├── commit.md           # Conventional commit with generated message
 │   ├── commit-push-pr.md   # Commit + push + GitHub PR creation
 │   ├── clean-gone.md       # Delete local branches whose upstream is gone
 │   ├── feature-dev.md      # Orchestrates the feature-dev trio in parallel
-│   ├── code-review.md      # Local code review (4 agents in parallel)
-│   └── review-pr.md        # Full PR review (6 agents in parallel)
+│   ├── code-review.md      # Local code review (5 agents in parallel, +Plannotator)
+│   └── review-pr.md        # Full PR review (7 agents in parallel, +Plannotator)
 │
 └── skills/
     ├── security-guidance/      # 9 security rules to apply systematically

@@ -1,3 +1,14 @@
+## Outils MCP et Spéciaux à Disposition
+
+Les agents doivent être conscients des outils à leur disposition et les utiliser judicieusement :
+
+- **Context7** : Documentation et exemples de code pour librairies/frameworks externes. À utiliser quand une librairie inconnue est rencontrée.
+- **WebFetch** : Récupération de documentation web externe. Nécessite confirmation utilisateur.
+- **Image Analysis** : Analyse de screenshots UI/UX pour les revues frontend. Utilisé par l'agent dédié `ui-reviewer`.
+- **Plannotator** : Revue interactive de plans et archivage de décisions. Invoqué automatiquement par `feature-dev` et `review-pr`.
+
+Consultez `docs/tool-guide.md` pour la procédure détaillée de chaque outil.
+
 # Coding Principles
 
 When writing or modifying code, follow these principles. When reviewing code, verify adherence to them.

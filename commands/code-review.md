@@ -42,6 +42,8 @@ Même mission qu'Agent A, en parallèle pour double couverture. Compare les rés
 Analyse uniquement le diff. Cherche : erreurs de logique évidentes, null/undefined non gérés, race conditions, problèmes de sécurité, imports manquants. Ne flag que les bugs certains (pas d'hypothèses sur le contexte hors-diff). Score de confiance 0-100.
 
 **Agent D — Problèmes d'implémentation (opus)**
+
+**Agent E — Revue UI frontend (flash)** — Si des fichiers frontend (`.tsx`, `.jsx`, `.css`, `.scss`, `.vue`, `.svelte`) ou des screenshots sont modifiés, lance un `ui-reviewer` pour analyser le design, l'accessibilité et la qualité visuelle, y compris via l'analyse d'images si des screenshots sont présents.
 Cherche dans le code introduit : sécurité (injection, XSS, etc.), logique incorrecte, typos dans les strings ou conditions, problèmes de performance évidents. Score 0-100.
 
 ### Étape 4 — Validation par agents
@@ -58,7 +60,11 @@ Filtrer explicitement :
 - Les issues hypothétiques dépendant d'un contexte extérieur au diff
 - Ce qu'un linter attraperait automatiquement
 
-### Étape 6 — Rapport final
+### Étape 6 — Revue interactive avec Plannotator
+
+Déclencher `/plannotator-review` pour ouvrir l'interface de revue interactive, permettant à l'utilisateur d'annoter et valider les issues directement.
+
+### Étape 7 — Rapport final
 
 ```markdown
 ## Résultat de la revue
