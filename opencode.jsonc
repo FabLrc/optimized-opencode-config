@@ -86,12 +86,12 @@
   "mcp": {
     "context7": {
       "type": "local",
-      "command": ["npx.cmd", "-y", "@upstash/context7-mcp"],
+      "command": ["npx", "-y", "@upstash/context7-mcp"],
       "enabled": true
     },
     "openrouter_image": {
       "type": "local",
-      "command": ["npx.cmd", "-y", "openrouter-image-mcp"],
+      "command": ["npx", "-y", "openrouter-image-mcp"],
       "environment": {
         "OPENROUTER_MODEL": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
         "LOG_LEVEL": "error",

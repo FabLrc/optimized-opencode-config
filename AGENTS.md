@@ -7,7 +7,7 @@ Les agents doivent être conscients des outils à leur disposition et les utilis
 - **Image Analysis** : Analyse de screenshots UI/UX pour les revues frontend. Utilisé par l'agent dédié `ui-reviewer`.
 - **Plannotator** : Revue interactive de plans et archivage de décisions. Invoqué automatiquement par `feature-dev` et `review-pr`.
 
-Consultez `docs/tool-guide.md` pour la procédure détaillée de chaque outil.
+Le fichier `docs/tool-guide.md` détaille la procédure de chaque outil pour l'agent principal. Les sous-agents (plan, build, feature-dev, etc.) ignorent ce fichier ; ils reçoivent les instructions d'outils directement via leur propre configuration.
 
 # Coding Principles
 
