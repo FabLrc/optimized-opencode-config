@@ -64,10 +64,11 @@
 
   // ── Plugins ──────────────────────────────────────────────────────────────────
   "plugin": [
-    ["@plannotator/opencode@latest", {
-      "workflow": "plan-agent",
-      "planningAgents": ["plan"]
-    }],
+    // Plannotator désactivé — incompatible avec la config actuelle (OmO)
+    // ["@plannotator/opencode@latest", {
+    //   "workflow": "plan-agent",
+    //   "planningAgents": ["plan"]
+    // }],
     "opencode-vision",
     "oh-my-openagent"
   ],
