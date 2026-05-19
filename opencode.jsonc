@@ -55,24 +55,11 @@
   },
 
   // ── Permissions globales ────────────────────────────────────────────────────
-  // Édition de fichiers toujours autorisée ; bash lecture seule auto-approuvée.
+  // Toutes les permissions accordées aux agents pour exécution sans interruption.
   "permission": {
     "edit": "allow",
-    "webfetch": "ask",
-    "bash": {
-      // Commandes de lecture / inspection : auto-approuvées
-      "git log*": "allow",
-      "git diff*": "allow",
-      "git status*": "allow",
-      "git show*": "allow",
-      "grep *": "allow",
-      "find *": "allow",
-      "ls *": "allow",
-      "cat *": "allow",
-      "echo *": "allow",
-      // Tout le reste demande confirmation
-      "*": "ask"
-    }
+    "webfetch": "allow",
+    "bash": "allow"
   },
 
   // ── Plugins ──────────────────────────────────────────────────────────────────
